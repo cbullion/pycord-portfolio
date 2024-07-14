@@ -66,6 +66,10 @@ holidays = {
 
 # MAIN CODE
 
+@bot.event
+async def on_ready():
+	check_announcement.start()
+
 @tasks.loop(minutes=15)
 async def check_announcement():
 
